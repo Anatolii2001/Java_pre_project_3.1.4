@@ -261,7 +261,7 @@ on(document, 'click', '.editbtn', (e) => {
     const fila = e.target.parentNode.parentNode;
     const id = fila.firstElementChild.innerHTML;
     const username = fila.children[1].innerHTML;
-// const password = fila.children[2].innerHTML;
+    const password = fila.children[2].innerHTML;
     const city = fila.children[2].innerHTML;
     const phone = fila.children[3].innerHTML;
     const email = fila.children[4].innerHTML;
@@ -269,11 +269,11 @@ on(document, 'click', '.editbtn', (e) => {
     let rolAr = role.replace(/[^A-Za-z]+/, " ").trim().split(/\s+/);
     rol(rolAr);
     $('#idFormEdit').val(id);
-    $('#usernameFormEdit').val(email);
-// $('#passwordFormEdit').val(password);
+    $('#emailFormEdit').val(username);
+    $('#passwordFormEdit').val(password);
     $('#cityFormEdit').val(city);
     $('#phoneFormEdit').val(phone);
-    $('#emailFormEdit').val(username);
+    $('#usernameFormEdit').val(email);
     $('#editMod').modal();
 })
 
@@ -283,17 +283,17 @@ on(document, 'click', '.delbtn', (e) => {
     const fila = e.target.parentNode.parentNode;
     const id = fila.firstElementChild.innerHTML;
     const username = fila.children[1].innerHTML;
-// const password = fila.children[2].innerHTML;
+    const password = fila.children[2].innerHTML;
     const city = fila.children[2].innerHTML;
     const phone = fila.children[3].innerHTML;
     const email = fila.children[4].innerHTML;
     const role = fila.children[5].innerHTML;
     $('#idForm').val(id);
-    $('#usernameForm').val(email);
-// $('#passwordForm').val(password);
+    $('#emailForm').val(username);
+    $('#passwordForm').val(password);
     $('#cityForm').val(city);
     $('#phoneForm').val(phone);
-    $('#emailForm').val(username);
+    $('#usernameForm').val(email);
     $('#roleForm').val(role);
     $('#neMod').modal();
 })
