@@ -12,7 +12,7 @@ $(document).ready(async function () {
         });
         str += `<tr id="dele${u.id}"><td>${u.id}</td>
 <td>${u.username}</td>
-<!--                    <td>${u.password}</td>-->
+<td>${u.password}</td>
 <td>${u.city}</td>
 <td>${u.phone}</td>
 <td>${u.email}</td>
@@ -167,7 +167,7 @@ $(document).ready(async function () {
         });
         row = ` <tr id="dele${u.id}"><td>${u.id}</td>
 <td>${u.username}</td>
-<!--                    <td>${u.password}</td>-->
+<td>${u.password}</td>
 <td>${u.city}</td>
 <td>${u.phone}</td>
 <td>${u.email}</td>
@@ -217,7 +217,7 @@ $(document).ready(function () {
         });
         row = ` <tr id="dele${u.id}"><td>${u.id}</td>
 <td>${u.username}</td>
-<!--                    <td>${u.password}</td>-->
+<td>${u.password}</td>
 <td>${u.city}</td>
 <td>${u.phone}</td>
 <td>${u.email}</td>
@@ -262,18 +262,18 @@ on(document, 'click', '.editbtn', (e) => {
     const id = fila.firstElementChild.innerHTML;
     const username = fila.children[1].innerHTML;
     const password = fila.children[2].innerHTML;
-    const city = fila.children[2].innerHTML;
-    const phone = fila.children[3].innerHTML;
-    const email = fila.children[4].innerHTML;
-    const role = fila.children[5].innerHTML;
+    const city = fila.children[3].innerHTML;
+    const phone = fila.children[4].innerHTML;
+    const email = fila.children[5].innerHTML;
+    const role = fila.children[6].innerHTML;
     let rolAr = role.replace(/[^A-Za-z]+/, " ").trim().split(/\s+/);
     rol(rolAr);
     $('#idFormEdit').val(id);
-    $('#emailFormEdit').val(username);
+    $('#usernameFormEdit').val(email);
     $('#passwordFormEdit').val(password);
     $('#cityFormEdit').val(city);
     $('#phoneFormEdit').val(phone);
-    $('#usernameFormEdit').val(email);
+    $('#emailFormEdit').val(username);
     $('#editMod').modal();
 })
 
@@ -284,16 +284,16 @@ on(document, 'click', '.delbtn', (e) => {
     const id = fila.firstElementChild.innerHTML;
     const username = fila.children[1].innerHTML;
     const password = fila.children[2].innerHTML;
-    const city = fila.children[2].innerHTML;
-    const phone = fila.children[3].innerHTML;
-    const email = fila.children[4].innerHTML;
-    const role = fila.children[5].innerHTML;
+    const city = fila.children[3].innerHTML;
+    const phone = fila.children[4].innerHTML;
+    const email = fila.children[5].innerHTML;
+    const role = fila.children[6].innerHTML;
     $('#idForm').val(id);
-    $('#emailForm').val(username);
+    $('#usernameForm').val(email);
     $('#passwordForm').val(password);
     $('#cityForm').val(city);
     $('#phoneForm').val(phone);
-    $('#usernameForm').val(email);
+    $('#emailForm').val(username);
     $('#roleForm').val(role);
     $('#neMod').modal();
 })
